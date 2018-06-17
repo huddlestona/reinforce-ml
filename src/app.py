@@ -8,7 +8,9 @@ app = Flask(__name__)
 
 scorer = Scorer()
 baseurl = 'https://en.wikipedia.org'
-scorer.load_nlp_pickle('../data/180606_def_nlp.pkl')
+#using old pickle
+scorer.load_nlp_pickle('../data/180530_def.pkl')
+
 # json_data = json.loads(scorer.nlp_data.to_json(orient='index'))
 directory = scorer.nlp_data['title'].tolist()
 section_title = scorer.nlp_data['section'].unique()
